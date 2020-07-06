@@ -171,7 +171,7 @@ type DockerSystem interface {
 	) (
 		err error,
 	)
-	ImageRemoveByName(name string) error
+	ImageRemoveByName(name string, force, pruneChildren bool) error
 	ContainerWaitStatusNotRunning(
 		id string,
 	) (
