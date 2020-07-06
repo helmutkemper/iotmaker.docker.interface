@@ -9,6 +9,7 @@ import (
 )
 
 type DockerSystem interface {
+	ImageGarbageCollector() (err error)
 	ContainerStatisticsOneShotByName(
 		name string,
 	) (
