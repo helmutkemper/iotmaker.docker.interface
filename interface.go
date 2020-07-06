@@ -162,7 +162,7 @@ type DockerSystem interface {
 	) (
 		err error,
 	)
-	ImageRemove(id string) error
+	ImageRemove(id string, force, pruneChildren bool) error
 	ImageBuildFromRemoteServer(
 		server,
 		imageName string,
